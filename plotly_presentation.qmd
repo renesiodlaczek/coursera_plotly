@@ -7,7 +7,7 @@ date: August 31, 2024
 ---
 
 ```{r}
-Sys.setenv(HOME="C:/Users/renes/Documents")
+#Sys.setenv(HOME="C:/Users/renes/Documents")
 ```
 
 ## Time Series Plot
