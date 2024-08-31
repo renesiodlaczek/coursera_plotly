@@ -1,6 +1,8 @@
 ---
 title: "plotly_presentation"
-format: revealjs
+format: 
+    revealjs:
+        embed-resources: true
 editor: visual
 author: René Siodlaczek
 date: August 31, 2024
