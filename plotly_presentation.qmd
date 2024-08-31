@@ -1,0 +1,26 @@
+---
+title: "plotly_presentation"
+format: revealjs
+editor: visual
+author: René Siodlaczek
+date: August 31, 2024
+---
+
+```{r}
+Sys.setenv(HOME="C:/Users/renes/Documents")
+```
+
+## Time Series Plot
+
+```{r}
+library(plotly)
+library(tidyverse)
+data("EuStockMarkets")
+
+stocks <- as_tibble(EuStockMarkets) |> 
+    mutate(time = time(EuStockMarkets)) |> 
+    pivot_longer(cols = 1:4, names_to = "index", values_to = "price")  
+
+plot_ly(stocks, x = ~time, y = ~price, color = ~index, mode = "lines") |> 
+    layout(title = "Selected stock market indices")
+```
